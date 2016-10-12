@@ -152,12 +152,16 @@
                     <h1 class="page-header">Dashboard</h1>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <h4 class="page-header">Pending Events</h4>
-                </div>
-            </div>
-            <div class="row">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#active">Active Events</a></li>
+                <li><a data-toggle="tab" href="#expired">Expired Events</a></li>
+                <li><a data-toggle="tab" href="#registered">Registered Events</a></li>
+                <li><a data-toggle="tab" href="#faculty">Faculty Event Detail</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="active" class="tab-pane fade in active">
+                    <h3>Active Events</h3>
+                    <div class="row">
                     <div class="col-lg-3 col-md-6">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
@@ -268,14 +272,12 @@
                                 </div>
                         </div>
                     </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <h4 class="page-header">Previous Events</h4>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                    <div class="col-lg-3 col-md-6">
+                <div id="expired" class="tab-pane fade">
+                    <h3>Expired Events</h3>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
                                 <div class="row">
@@ -293,17 +295,17 @@
                             
                                 <div class="panel-footer">
                                     <a href="#">
-                                    <span class="pull-left"><i class="fa fa-check fa-2x"></i></span>
+                                    <span class="pull-left"><i class="fa fa-clock-o fa-2x"></i></span>
                                     </a>
                                     <a href="#">
-                                    <span class="pull-right"><i class="fa fa-times fa-2x"></i></span>
+                                    <span class="pull-right">2 days ago</span>
                                     </a>   
                                     <div class="clearfix"></div>
                                 </div>
                             
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                        <div class="col-lg-3 col-md-6">
                         <div class="panel panel-green">
                             <div class="panel-heading">
                                 <div class="row">
@@ -321,16 +323,16 @@
                             
                                 <div class="panel-footer">
                                     <a href="#">
-                                        <span class="pull-left"><i class="fa fa-check fa-2x"></i></span>
+                                    <span class="pull-left"><i class="fa fa-clock-o fa-2x"></i></span>
                                     </a>
                                     <a href="#">
-                                        <span class="pull-right"><i class="fa fa-times fa-2x"></i></span>
+                                    <span class="pull-right">2 days ago</span>
                                     </a>   
                                     <div class="clearfix"></div>
                                 </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                        <div class="col-lg-3 col-md-6">
                         <div class="panel panel-yellow">
                             <div class="panel-heading">
                                 <div class="row">
@@ -348,17 +350,16 @@
                         
                                 <div class="panel-footer">
                                     <a href="#">
-                                    <span class="pull-left"><i class="fa fa-check fa-2x"></i></span>
+                                    <span class="pull-left"><i class="fa fa-clock-o fa-2x"></i></span>
                                     </a>
                                     <a href="#">
-                                    <span class="pull-right"><i class="fa fa-times fa-2x"></i></span>
+                                    <span class="pull-right">2 days ago</span>
                                     </a>   
-
                                     <div class="clearfix"></div>
                                 </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                        <div class="col-lg-3 col-md-6">
                         <div class="panel panel-red">
                             <div class="panel-heading">
                                 <div class="row">
@@ -375,19 +376,21 @@
                             </div>
                                 <div class="panel-footer">
                                     <a href="#">
-                                    <span class="pull-left"><i class="fa fa-check fa-2x"></i></span>
+                                    <span class="pull-left"><i class="fa fa-clock-o fa-2x"></i></span>
                                     </a>
                                     <a href="#">
-                                    <span class="pull-right"><i class="fa fa-times fa-2x"></i></span>
+                                    <span class="pull-right">2 days ago</span>
                                     </a>   
-
                                     <div class="clearfix"></div>
                                 </div>
                         </div>
                     </div>
-            </div>
-            <div class="row">
-                    <div class="col-lg-3 col-md-6">
+                    </div>
+                </div>
+                <div id="registered" class="tab-pane fade">
+                    <h3>Registered Events</h3>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
                                 <div class="row">
@@ -405,17 +408,17 @@
                             
                                 <div class="panel-footer">
                                     <a href="#">
-                                    <span class="pull-left"><i class="fa fa-check fa-2x"></i></span>
+                                    <span class="pull-left"><i class="fa fa-clock-o fa-2x"></i></span>
                                     </a>
                                     <a href="#">
-                                    <span class="pull-right"><i class="fa fa-times fa-2x"></i></span>
+                                    <span class="pull-right">2 days ago</span>
                                     </a>   
                                     <div class="clearfix"></div>
                                 </div>
                             
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                        <div class="col-lg-3 col-md-6">
                         <div class="panel panel-green">
                             <div class="panel-heading">
                                 <div class="row">
@@ -433,16 +436,16 @@
                             
                                 <div class="panel-footer">
                                     <a href="#">
-                                        <span class="pull-left"><i class="fa fa-check fa-2x"></i></span>
+                                    <span class="pull-left"><i class="fa fa-clock-o fa-2x"></i></span>
                                     </a>
                                     <a href="#">
-                                        <span class="pull-right"><i class="fa fa-times fa-2x"></i></span>
+                                    <span class="pull-right">2 days ago</span>
                                     </a>   
                                     <div class="clearfix"></div>
                                 </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                        <div class="col-lg-3 col-md-6">
                         <div class="panel panel-yellow">
                             <div class="panel-heading">
                                 <div class="row">
@@ -460,17 +463,16 @@
                         
                                 <div class="panel-footer">
                                     <a href="#">
-                                    <span class="pull-left"><i class="fa fa-check fa-2x"></i></span>
+                                    <span class="pull-left"><i class="fa fa-clock-o fa-2x"></i></span>
                                     </a>
                                     <a href="#">
-                                    <span class="pull-right"><i class="fa fa-times fa-2x"></i></span>
+                                    <span class="pull-right">2 days ago</span>
                                     </a>   
-
                                     <div class="clearfix"></div>
                                 </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                        <div class="col-lg-3 col-md-6">
                         <div class="panel panel-red">
                             <div class="panel-heading">
                                 <div class="row">
@@ -487,23 +489,20 @@
                             </div>
                                 <div class="panel-footer">
                                     <a href="#">
-                                    <span class="pull-left"><i class="fa fa-check fa-2x"></i></span>
+                                    <span class="pull-left"><i class="fa fa-clock-o fa-2x"></i></span>
                                     </a>
                                     <a href="#">
-                                    <span class="pull-right"><i class="fa fa-times fa-2x"></i></span>
+                                    <span class="pull-right">2 days ago</span>
                                     </a>   
-
                                     <div class="clearfix"></div>
                                 </div>
                         </div>
                     </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <h4 class="page-header">Faculty Event Details</h4>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
+                <div id="faculty" class="tab-pane fade">
+                    <h3>Faculty Event Detail</h3>
+                    <div class="row">
                     <div class="col-lg-3 col-md-6">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
@@ -661,7 +660,7 @@
                         </div>
                     </div>
             </div>
-            <div class="row">
+                    <div class="row">
                     <div class="col-lg-3 col-md-6">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
@@ -819,11 +818,13 @@
                         </div>
                     </div>
             </div>
+                </div>
+            </div>
+        </div>
+
             <!-- ... Your content goes here ... -->
 
-        </div>
     </div>
-
 </div>
 
 <!-- jQuery -->
