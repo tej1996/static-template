@@ -11,7 +11,6 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
     <!-- MetisMenu CSS -->
     <link href="css/metisMenu.min.css" rel="stylesheet">
 
@@ -26,7 +25,15 @@
 
     <!-- Custom Fonts -->
     <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
+    
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+    
+    <!--Multi-Select-Input-->
+    <script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
+    <link rel="stylesheet" href="css/bootstrap-multiselect.css" type="text/css"/>
+    
+    
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -34,6 +41,9 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <link href="css/dashboard.css" rel=stylesheet type="text/css">
+    
+    <!--Form CSS-->
+    <link rel="stylesheet" href="css/form-elements.css">
 </head>
 <body>
 
@@ -157,6 +167,7 @@
                 <li><a data-toggle="tab" href="#expired">Expired Events</a></li>
                 <li><a data-toggle="tab" href="#registered">Registered Events</a></li>
                 <li><a data-toggle="tab" href="#faculty">Faculty Event Detail</a></li>
+                <li><a data-toggle="tab" href="#create-event">Create Event</a></li>
             </ul>
             <div class="tab-content">
                 <div id="active" class="tab-pane fade in active">
@@ -272,7 +283,7 @@
                                 </div>
                         </div>
                     </div>
-                    </div>
+            </div>
                 </div>
                 <div id="expired" class="tab-pane fade">
                     <h3>Expired Events</h3>
@@ -819,19 +830,88 @@
                     </div>
             </div>
                 </div>
+                <div id="create-event" class="tab-pane fade">
+                    <h3>Create Event</h3>
+                    <div class="row">
+                        <form class="form-horizontal">
+                            <fieldset>
+                            <!-- Event Name-->
+                            <div class="form-group">
+                              <label class="col-md-4 control-label" for="event_name">Event Name</label>  
+                              <div class="col-md-4">
+                              <input id="event_name" name="event_name" type="text" placeholder="Event Name" class="form-control input-md">
+
+                              </div>
+                            </div>
+
+                            <!-- Description -->
+                            <div class="form-group">
+                              <label class="col-md-4 control-label" for="textarea">Description</label>
+                              <div class="col-md-4">                     
+                                <textarea class="form-control" id="textarea" placeholder="Event Description" name="textarea"></textarea>
+                              </div>
+                            </div>
+
+                            <!-- Start Date & Time-->
+                            <div class="form-group">
+                              <label class="col-md-4 control-label" for="textinput">Start Date & Time</label>  
+                              <div class="col-md-4">
+                                <input class="form-control" name="registration_date" id="registration-date" type="date">
+                                <input class="form-control" name="registration_time" id="registration-time" type="time">
+                              </div>
+                            </div>
+                            <!-- End Date & Time-->
+                            <div class="form-group">
+                              <label class="col-md-4 control-label" for="textinput">End Date & Time</label>  
+                              <div class="col-md-4">
+                                <input class="form-control" name="registration_date" id="registration-date" type="date">
+                                <input class="form-control" name="registration_time" id="registration-time" type="time">
+                              </div>
+                            </div>
+                            <!--Select Required Fields-->
+                            <div class="form-group">
+                              <label class="col-md-4 control-label" for="textinput">Select Required Fields</label>  
+                              <div class="col-md-4">
+                                <!-- Build your select: -->
+                                  <select id="fields-select" multiple="multiple">
+                                      <option value="cheese">Cheese</option>
+                                      <option value="tomatoes">Tomatoes</option>
+                                      <option value="mozarella">Mozzarella</option>
+                                      <option value="mushrooms">Mushrooms</option>
+                                      <option value="pepperoni">Pepperoni</option>
+                                      <option value="onions">Onions</option>
+                                  </select>
+                              </div>
+                            </div>
+                            <div class="form-group"> 
+                              <div class="col-md-8 pull-right">
+                                <button class="btn btn-success" type="submit" value="Submit">Submit</button>
+                              </div>
+                            </div> 
+
+                            </fieldset>
+
+                            </form>
+                        <!-- Initialize the plugin: -->
+                        <script type="text/javascript">
+                            $(document).ready(function() {
+                                $('#fields-select').multiselect({
+                                maxHeight: 150
+                                });
+                            });
+                        </script>
+                    </div>
+                </div>
             </div>
         </div>
 
             <!-- ... Your content goes here ... -->
-
     </div>
 </div>
 
-<!-- jQuery -->
-<script src="js/jquery.min.js"></script>
-
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
+
 
 <!-- Metis Menu Plugin JavaScript -->
 <script src="js/metisMenu.min.js"></script>
