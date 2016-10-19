@@ -32,6 +32,26 @@
 
     <!-- Custom Fonts -->
     <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <style>
+         @media screen and (orientation:landscape){
+            .port {
+                display: none;
+            }
+            .land {
+                display: block;
+            }
+        }
+        @media screen and (orientation:portrait){
+            .port {
+                display: block;
+            }
+            .land {
+                display: none;
+            }
+        }
+        
+       
+    </style>
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -49,7 +69,8 @@
         <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">Startmin</a>
+                <a class="navbar-brand land" href="#">Brand</a>
+                <a class="navbar-brand port" href="#"><i class="fa fa-bullhorn fa-fw"></i></a>
             </div>
 
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -60,9 +81,14 @@
             </button>
 
             <!-- Top Navigation: Left Menu -->
-            <ul class="nav navbar-nav navbar-left navbar-top-links">
-                <li><a href="#"><i class="fa fa-home fa-fw"></i> Website</a></li>
-            </ul>
+            <!--<ul class="nav navbar-nav navbar-left navbar-top-links">
+                <li class="port"><a href="#"><i class="fa fa-home fa-fw"></i></a></li>
+                <li class="land"><a href="#">Website</a></li>
+            </ul>-->
+            <div class="navbar-header">
+                <a class="navbar-brand land" href="#">new tab</a>
+                <a class="navbar-brand port" href="#"><i class="fa fa-plus fa-fw"></i></a>
+            </div>
 
             <!-- Top Navigation: Right Menu -->
             <ul class="nav navbar-right navbar-top-links">
@@ -90,7 +116,7 @@
                 </li>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i> secondtruth <b class="caret"></b>
+                        <i class="fa fa-user fa-fw"></i><b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
                         <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
@@ -98,7 +124,7 @@
                         <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        <li><a href="index.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
                     </ul>
                 </li>
@@ -272,7 +298,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label class="sr-only" for="form-branch">Branch</label>
-                                        <input type="text" name="year" placeholder="Branch..." class="form-control" id="form-year">
+                                        <input type="text" name="year" placeholder="Branch..." class="form-control" id="form-branch" list="br">
                                         <datalist id="br">
                                             <option value="C"></option>
                                             <option value="EE"></option>
